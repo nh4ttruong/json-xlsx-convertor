@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
           textInput.classList.remove("d-block");
           textInput.classList.add("d-none");
           fileInput.disabled = false;
+          downloadButton.setAttribute("download", "");
         } else if (src === "json") {
           document.getElementById("xlsxDest").checked = true;
           textInput.classList.remove("d-none");
@@ -31,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
           textAreaInput.disabled = false;
           textAreaInput.value = "";
           fileInput.disabled = false;
+          fileInput.value = "";
+          outputArea.classList.remove("d-block");
+          outputArea.classList.add("d-none");
+          downloadButton.setAttribute("download", "");
         }
       }
     });
